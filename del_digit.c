@@ -11,7 +11,7 @@ void del_digit(char str[])
 
     printf("length is :%d\n", len);
 
-    while (str[int_flag++]) {
+    while (str[int_flag]) {
         if (str[int_flag] >= '0' && str[int_flag] <= '9') {
             for (int i = int_flag; i < len - 1; i++) {
                 str[i] = str[i + 1];
@@ -21,6 +21,7 @@ void del_digit(char str[])
             int_flag--; // correct int_flag
             printf("string is now: %s\n", str);
         }
+        int_flag++;
     }
 }
 
